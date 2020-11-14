@@ -1,0 +1,84 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+		    "path" : "pages/demo/demo",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "view&text",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		},
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "第一季"  //首页设置标题
+			}
+		}
+	    ,{
+            "path" : "pages/news/news",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/msg/msg",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/my/my",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+      
+    ],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "第一季", //全局标题
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#FFFFFF"
+	},
+	"tabBar":{
+		"color":"#323232",
+		"selectedColor":"#ED6384",
+		"backgroundColor":"#FFFFFF",
+		"borderStyle":"black",
+		"list":[{
+			"pagePath":"pages/index/index",
+			"text":"首页",
+			"iconPath":"static/tabbar/index.png",
+			"selectedIconPath":"static/tabbar/indexed.png"
+		},
+		{
+			"pagePath":"pages/news/news",
+			"text":"动态",
+			"iconPath":"static/tabbar/news.png",
+			"selectedIconPath":"static/tabbar/newsed.png"
+		},
+		{
+			"pagePath":"pages/msg/msg",
+			"text":"消息",
+			"iconPath":"static/tabbar/paper.png",
+			"selectedIconPath":"static/tabbar/papered.png"
+		},
+		{
+			"pagePath":"pages/my/my",
+			"text":"我的",
+			"iconPath":"static/tabbar/home.png",
+			"selectedIconPath":"static/tabbar/homeed.png"
+		}
+		]
+	}
+}
