@@ -1,15 +1,6 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-		    "path" : "pages/demodata/demodata",
-		    "style" :                                                                                    
-		    {
-		        "navigationBarTitleText": "测试data",
-		        "enablePullDownRefresh": false
-		    }
-		    
-		},
-		{
 		    "path" : "pages/demo/demo",
 		    "style" :                                                                                    
 		    {
@@ -21,7 +12,32 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "第一季"  //首页设置标题
+				"navigationBarTitleText": "第一季",  //首页设置标题
+				"app-plus":{
+					//导航栏配置
+					"titleNView":{
+						//搜索框
+						"searchInput":{
+							"align":"center",
+							"backgroundColor":"#F5F4F2",
+							"borderRadius":"4px",
+							"disabled":true,
+							"placeholder":"搜索帖子",
+							"placeholderColor":"#6C6D67"
+						},
+						"buttons":[
+							{
+								"color":"#333333",
+								"colorPressed":"#fd597c",
+								"float":"right",
+								"fontSize":"14px",
+								"fontSrc":"/static/uni.ttf",
+								"text":"\ue729"
+							}
+						]
+					
+					}
+				}
 			}
 		}
 	    ,{
@@ -44,6 +60,51 @@
         }
         ,{
             "path" : "pages/my/my",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/demo/demolist/demolist",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/demo/event/event",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/demo/watch/watch",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/demo/count/count",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/demo/data/data",
             "style" :                                                                                    
             {
                 "navigationBarTitleText": "",

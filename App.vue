@@ -26,4 +26,6 @@
 	@import "./common/icon.css";
 	/*动画库*/
 	@import "./common/animate.css";
+	/*自定义样式库*/
+	@import "./common/free.css";
 </style>

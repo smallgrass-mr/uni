@@ -3,10 +3,15 @@
 		<view :class="classname">
 				<view>{{userinfo.username}}</view>
 				<view>{{userinfo.sex}}</view>
-				<view>{{userinfo.age}}</view>
+				<view >{{userinfo.age}}</view>
 		</view>
+		<view :style="{'color':colordata,'font-size':size_num+'px'}"> Tom Borther</view>
+		<view class="box1" v-if="is_show">BOX1 </view>
+		<view class="box1" v-if="(age > 20)">age </view>
 		<button type="default" @tap="changUserName('李四')">修改名字</button>
 		<button type="default" @tap="changeClass()">修改样式</button>
+		<button type="default" @tap="changeShow()">显示隐藏</button>
+		<button type="default" @tap="changeAge()">修改年龄</button>
 	</view>
 </template>
 
@@ -20,7 +25,11 @@
 					age:18,
 					sex:"男"
 				},
-				classname:"box"
+				classname:"box",
+				colordata:"blue",
+				size_num:"50",
+				is_show:true,
+				age:19
 			}
 		},
 		methods: {
@@ -30,12 +39,25 @@
 				},
 				changeClass:function(){
 					this.classname = "box2";
+				},
+				changeShow:function(){
+					this.is_show = !this.is_show;				
+				},
+				changeAge:function(){
+					this.age = this.age + 11;
 				}
 		}
 	}
 </script>
 
 <style>
+	.box1{
+		border: 1upx solid #09BB07;
+		height: 100upx;
+		width: 100upx;
+		align-items: center;
+		justify-content: center;
+	}
 .box{
 	border: 1upx solid #333333;
 	height: 500upx;
