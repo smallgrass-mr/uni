@@ -2,7 +2,8 @@
 	<view class="content">
 		<block v-for="(item,index) in list" :key='index'>
 			<!-- 列表组件 -->
-			<common-list  :item="item" :index="index"> </common-list>
+			<common-list  :item="item" :index="index"  @doSupport="doSupport" @follow="follow"
+			> </common-list>
 			<!-- 全局分割线组件 -->
 			<devider></devider>
 		</block>
@@ -38,10 +39,10 @@
 						user_pic:"/static/main/userpic.png",
 						news_time:"2020-11-19 10:00:00",
 						is_follow:false,
-						title:"这里是标题",
+						title:"这里是标题s",
 						title_pic:"/static/main/bhz1.png",
 						support:{
-							type:"support",
+							type:"unsupport",
 							support_count:1,
 							unsupport_count:2
 						},
@@ -70,7 +71,26 @@
 
 		},
 		methods: {
-
+			//详情
+			openDetail(){
+				console.log('detail');
+			},
+			//踩
+			doSupport(e){
+				
+				console.log(e);
+			},
+			//赞
+			follow(e){
+					this.list[e].is_follow = true ;
+					uni.showToast({
+						title:'关注成功'
+					})
+			},
+			//打开空间
+			openSpace(){
+				console.log('openSpace');
+			},
 		}
 	}
 </script>

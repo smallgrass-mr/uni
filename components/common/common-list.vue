@@ -12,7 +12,9 @@
 			</view>
 			<!-- 图标按钮 -->
 			<view class="flex justify-center align-center rounded text-white animate__animated animate__jello animate__faster"  
-			hover-class="jello" style="width: 90rpx;height: 50rpx;background-color: #ff4a6a;">关注</view>
+			hover-class="jello" style="width: 90rpx;height: 50rpx;background-color: #ff4a6a;"
+			@click="follow()"
+			>关注</view>
 		</view>
 		<!-- 标题 -->
 		<view  class="font my-1">{{item.title}}</view>
@@ -21,13 +23,20 @@
 		</view>
 		<!-- 图片按钮 -->
 		<view  class="flex align-center" >
-			<view  class="flex align-center justify-center flex-1 animate__animated animate__jello "  >
+			<view  class="flex align-center justify-center flex-1 animate__animated animate__jello " 
+			  :class="item.support.type === 'unsupport' ?'text-main':''"
+			  @click="doSupport('support')"
+			 >
 				<text class="iconfont icon-dianzan mr-2"  >{{item.support.support_count}}</text>
 			</view>
-			<view  class="flex align-center justify-center flex-1 mr-20 animate__animated animate__jello" >
+			<view  class="flex align-center justify-center flex-1 mr-20 animate__animated animate__jello " 
+			 :class="item.support.type === 'unsupport' ?'text-main':''"
+			>
 				<text class="iconfont icon-cai mr-2" >{{item.support.unsupport_count}}</text>
 			</view>
-			<view  class="flex align-center justify-center flex-1 animate__animated animate__jello" >
+			<view  class="flex align-center justify-center flex-1 animate__animated animate__jello"
+			  :class="item.support.type === 'unsupport' ?'text-main':''"
+			 >
 				<text class="iconfont icon-pinglun mr-2" >{{item.comment_count}}</text>
 			</view>
 			<view class="flex align-center justify-center flex-1 animate__animated  animate__jello" >
@@ -43,6 +52,27 @@
 			props:{
 				item:Object,
 				index:Number
+			},
+			methods:{
+				//详情
+				openDetail(){
+					console.log('detail');
+				},
+				//踩
+				doSupport(type){
+					this.$emit('doSupport',{
+						type:type,
+						index:this.index
+					})
+				},
+				//赞
+				follow(){
+					this.$emit('follow',this.index)
+				},
+				//打开空间
+				openSpace(){
+					console.log('openSpace');
+				},
 			}
 		}
 </script>
