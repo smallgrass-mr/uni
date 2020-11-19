@@ -12,7 +12,7 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "第一季",  //首页设置标题
+				"navigationBarTitleText": "uniapp",  //首页设置标题
 				"app-plus":{
 					//导航栏配置
 					"titleNView":{
