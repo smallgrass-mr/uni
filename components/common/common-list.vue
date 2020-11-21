@@ -31,6 +31,7 @@
 			</view>
 			<view  class="flex align-center justify-center flex-1 mr-20 animate__animated animate__jello " 
 			 :class="item.support.type === 'unsupport' ?'text-main':''"
+			  @click="doSupport('unsupport')"
 			>
 				<text class="iconfont icon-cai mr-2" >{{item.support.unsupport_count}}</text>
 			</view>
@@ -65,7 +66,7 @@
 						index:this.index
 					})
 				},
-				//赞
+				//关注
 				follow(){
 					this.$emit('follow',this.index)
 				},
