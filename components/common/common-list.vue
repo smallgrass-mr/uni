@@ -27,18 +27,18 @@
 			  :class="item.support.type === 'unsupport' ?'text-main':''"
 			  @click="doSupport('support')"
 			 >
-				<text class="iconfont icon-dianzan mr-2"  >{{item.support.support_count}}</text>
+				<text class="iconfont icon-dianzan mr-2"  >{{item.support.support_count?item.support.support_count:'顶'}}</text>
 			</view>
 			<view  class="flex align-center justify-center flex-1 mr-20 animate__animated animate__jello " 
 			 :class="item.support.type === 'unsupport' ?'text-main':''"
 			  @click="doSupport('unsupport')"
 			>
-				<text class="iconfont icon-cai mr-2" >{{item.support.unsupport_count}}</text>
+				<text class="iconfont icon-cai mr-2" >{{ item.support.unsupport_count>0 ? item.support.unsupport_count : '踩'}}</text>
 			</view>
 			<view  class="flex align-center justify-center flex-1 animate__animated animate__jello"
 			  :class="item.support.type === 'unsupport' ?'text-main':''"
 			 >
-				<text class="iconfont icon-pinglun mr-2" >{{item.comment_count}}</text>
+				<text class="iconfont icon-pinglun mr-2" >{{item.comment_count?item.comment_count:'评论'}}</text>
 			</view>
 			<view class="flex align-center justify-center flex-1 animate__animated  animate__jello" >
 				<text class="iconfont icon-zhuanfa1 mr-2" >转发</text>

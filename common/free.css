@@ -106,3 +106,7 @@
 .text-light-white{color:rgba(255,255,255,0.5)}
 
 /*文字 --end--*/
+
+/*滚动*/
+.scroll-row{width: 100%;white-space: nowrap;}
+.scroll-row-item{display: inline-block!important;}
