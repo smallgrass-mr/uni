@@ -96,6 +96,15 @@
 			loadMore,
 			nothing
 		},
+		//点击搜索框
+		onNavigationBarSearchInputClicked(){
+			uni.navigateTo({
+				url: '../search/search',
+				success: res => {},
+				fail: () => {},
+				complete: () => {}
+			});
+		},
 		data() {
 			return {
 				//列表高度

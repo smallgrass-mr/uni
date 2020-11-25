@@ -103,6 +103,39 @@
             }
             
         }
+        ,{
+            "path" : "pages/search/search",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"app-plus":{
+					//导航栏配置
+					"titleNView":{
+						//搜索框
+						"searchInput":{
+							"align":"center",
+							"backgroundColor":"#F5F4F2",
+							"borderRadius":"4px",
+							"disabled":false,
+							"placeholder":"搜索帖子",
+							"placeholderColor":"#6C6D67"
+						},
+						"buttons":[
+							{
+								"color":"#333333",
+								"colorPressed":"#fd597c",
+								"float":"right",
+								"fontSize":"14px",
+								"text":"搜索"
+							}
+						]
+					
+					}
+				}
+            }
+            
+        }
     ],
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
