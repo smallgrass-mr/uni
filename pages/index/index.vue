@@ -105,6 +105,12 @@
 				complete: () => {}
 			});
 		},
+		//监听导航按钮事件
+		onNavigationBarButtonTap() {
+			uni.navigateTo({
+				url:'../add-input/add-input'
+			})
+		},
 		data() {
 			return {
 				//列表高度
